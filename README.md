@@ -63,7 +63,7 @@ return status codes [200, 500, 302] and results containing the word "paypal" in 
 return status codes [200, 500, 302] and results containing the word "paypal" in his body.
 ```
 ```
-▶ cat urls.txt | wurl -c 50  -s "200" --random-agent -test
+▶ cat urls.txt | wurl -c 50  -s "200" --random-agent -t
 -> send a HTTP and HTTPS query for each link using a random-agent and return just working ones.
 return status codes [200].
 ```
@@ -71,12 +71,12 @@ return status codes [200].
 ## search examples
 
 ```
-▶ cat urls.txt | wurl -c 50  -s "200" --random-agent -test -q "index.php"
+▶ cat urls.txt | wurl -c 50  -s "200" --random-agent -t -q "index.php"
 -> send a HTTP and HTTPS query for each link using a random-agent and replacing the query for "index.php" and return just working ones.
 return status codes [200].
 ```
 ```
-▶ wurl -u "https://www.something.com?param=1&param=2&param=3" -c 50  -s "200" --random-agent -test -q "index.php"
+▶ wurl -u "https://www.something.com?param=1&param=2&param=3" -c 50  -s "200" --random-agent -t -q "index.php"
 -> send a HTTP and HTTPS query for each link using a random-agent and replacing the query for "index.php" and return just working ones.
 return status codes [200].
 ```
